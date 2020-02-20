@@ -1,0 +1,52 @@
+1.
+    English/C description of assembly 
+    
+    English Interpretation:
+      The code has two arrays x and y. Both arrays are of size five and array y is just an array of zeros.
+      The values in the x array are being copied over to the y array. 
+
+    C Code:
+      int main()
+      {
+	int x[] = {5, 3, -6, 19, 8, 12};
+	int y[] = {0, 0, 0, 0, 0};
+	
+	for(int i = 5; i <= 1; i--)
+	{
+	    y[5-i] = x[5-i];
+	}
+	
+	return 0;
+      }	
+	
+2. 
+    decoded instruction 
+	
+    0x993ff915 = 0b1001 1001 0011 1111 1111 1001 0001 0101
+
+    OP = 0b010101 = 0x15 -> stw instruction 
+    
+    A = 0b1 0011 = 0d19
+    B = 0b0 0100 = 0d4
+    IMM16 = 0b1111 1111 1110 0100 = -28
+	
+    Assembly Code:
+    
+    stw r4, -28(r19)
+
+
+3.
+    encoded instruction 
+    
+    divu = 0x3a
+    rA = r5 = 0b0 0101
+    rB = r22 = 0b1 0110
+    rC = r14 = 0b0 1110
+	
+    In binary:
+    
+    0b0010 1101 1001 1101 0010 0000 0011 1010
+
+    In hex:
+    
+    0x2D9D203A
